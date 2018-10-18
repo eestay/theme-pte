@@ -1,0 +1,70 @@
+# -*- coding: utf-8 -*-
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+
+<%block name="pagetitle">${_(u"Preguntas Frecuentes - EduAbierta")}</%block>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="container about" style="min-width:320px !important;">
+        <h1>${_(u"Preguntas Frecuentes - EduAbierta")}</h1>
+        <p><strong>${_(u"¿Qué es EduAbierta?")}</strong></p>
+		<p>${_(u"Una plataforma digital desarrollada por el Programa Transversal de Educación de la Universidad de Chile para proporcionar recursos educativos abiertos y de calidad a toda la comunidad escolar nacional, a través de la apertura del conocimiento y el patrimonio cultural acumulado en 174 años de historia al servicio de la educación pública chilena y latinoamericana.")}</p>
+		
+		<p><strong>${_(u"¿Con qué tipo de implementos oequipamiento debo contar para inscribirme en un curso de EduAbierta? ")}</strong></p>
+        <p>${_(u"Necesitas un computador con una conexión a internet. Te recomendamos los navegadores Firefox y Chrome, los que puedes descargar de manera gratuita. ")}</p>
+		
+		<p><strong>${_(u"¿Cuántas cuentas puedo abrir en EduAbierta?")}</strong></p>
+        <p>${_(u"Sólo una cuenta de usuario, la que debes abrir usando tus datos personales reales.")}</p>
+		
+		<p><strong>${_(u"¿Qué tipo de certificación obtengo al concluir un curso de EduAbierta?")}</strong></p>
+        <p>${_(u"Se entregará una Constancia de Honor digital a aquellos participantes que cumplan con los requisitos de aprobación de los cursos.")}</p>
+		
+		<p><strong>${_(u"¿Quiénes pueden tomar los cursos?")}</strong></p>
+        <p>${_(u"Los cursos de EduAbierta están dirigidos a los integrantes de la comunidad escolar: docentes,  directivos, asistentes de la educación, estudiantes secundarios y sus familias, así como a personas interesadas en la educación. No existen requisitos académicos previos para tomar los cursos.")}</p>
+		
+		<p><strong>${_(u"¿Cuál es el costo de los cursos?")}</strong></p>
+        <p>${_(u"Los cursos son totalmente gratuitos. Sin embargo, próximamente se ofrecerá la posibilidad de recibir un certificado de aprobación propiamente tal, en cuyo caso se cobrará una suma módica, pero siempre será posible tomar los cursos sin costo alguno.")}</p>
+   	
+		<p><strong>${_(u"¿Cuál es la duración de los cursos?")}</strong></p>
+        <p>${_(u"En general, los cursos durante entre 5 y 6 semanas.")}</p>
+		
+		<p><strong>${_(u"¿Los cursos se toman en algún horario en especial?")}</strong></p>
+        <p>${_(u"No, durante el periodo en que el curso se dicta, estos están disponibles las 24 horas del día.")}</p>
+		
+		<p><strong>${_(u"¿Cuánto tiempo de dedicación requieren los cursos?")}</strong></p>
+        <p>${_(u"Cada curso demanda un determinado tiempo de dedicación, pero en último término este depende del ritmo y estilo de aprendizaje de cada participante.")}</p>
+		
+		<p><strong>${_(u"¿Cómo me registro en EduAbierta?")}</strong></p>
+        <p>${_(u"En la página principal, en la parte superior y a la derecha de tu pantalla, encontrarás el botón Registrarse, donde debes ingresar los datos solicitados, aceptar los términos de la plataforma y el Código de Honor. Tras inscribirte, recibirás un correo de activación de tu cuenta. Tu usuario para acceder a la plataforma será el correo electrónico que usaste para registrarte.")}</p>
+   	
+		<p><strong>${_(u"¿Puedo cambiar mi contraseña?")}</strong></p>
+        <p>${_(u"Si, las veces que consideres necesario. Para cambiarla tienes que iniciar sesión y hacer clic en el  botón resetear contraseña.")}</p>
+   	
+		<p><strong>${_(u"¿Qué debo hacer si olvido mi contraseña?")}</strong></p>
+        <p>${_(u"Debe ir al botón ¿Olvidó su contraseña? e ingresar el correo electrónico con el que te registraste y enviar mensaje. Tras realizar esos pasos recibirás un correo electrónico con indicaciones para crear la nueva contraseña.")}</p>
+		
+   		<p><strong>${_(u"Cuándo tenga una consulta durante el curso, ¿Cómo puedo resolverla? ¿A quién debo recurrir?")}</strong></p>
+        <p>${_(u"Los cursos cuentan con un foro público con ayuda técnica y foros relativos a los contenidos. Nuestro equipo estará atento a tus consultas y comentarios. ")}</p>
+		
+   		<p><strong>${_(u"¿Puedo tomar otro curso si no terminé el anterior?")}</strong></p>
+        <p>${_(u"Puedes, pero te recomendamos concluir los cursos que tomes para recibir tu constancia de honor.")}</p>
+		
+   		<p><strong>${_(u"¿Cuándo y cómo recibiré mi Constancia de Honor?")}</strong></p>
+        <p>${_(u"Cuando termine la evaluación del curso, comunicaremos a los participantes aprobados vía correo electrónico la fecha e instrucciones para descargarla, proceso que se hace en el sitio de EduAbierta. Si tienes algún problema para descargarla, revisa que el antivirus o navegador de tu sistema no esté bloqueando la descarga. ")}</p>
+		
+		<p><strong>${_(u"Los materiales  de cada curso, ¿Puedo compartirlos con otras personas? ")}</strong></p>
+        <p>${_(u"Por supuesto. La idea es que esta información circule en tu comunidad. Debes, eso sí, hacerlo de manera gratuita y citando la fuente, que en este caso es EduAbierta del Programa Transversal de Educación de la Universidad de Chile.")}</p>
+		
+		<p><strong>${_(u"¿Mi cuenta de usuario puede ser cancelada por EduAbierta?")}</strong></p>
+        <p>${_(u"Si violas el Código de Honor, EduAbierta se reserva el derecho de caducar tu cuenta.")}</p>
+		
+		<p><strong>${_(u"¿Qué es el Código de Honor?")}</strong></p>
+        <p>${_(u"Es un compromiso de conducta y comportamiento ético que suscriben las personas que toman los cursos disponibles en nuestra plataforma.")}</p>
+   	
+		<p><strong>${_(u"¿Cómo puedo enterarme de los futuros cursos  disponibles?")}</strong></p>
+        <p>${_(u"Al abrir una cuenta en EduAbierta recibirás información periódicamente respecto de la programación de los cursos.")}</p>
+ 
+	 </section>
+</main>
+

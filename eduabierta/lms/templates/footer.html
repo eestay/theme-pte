@@ -1,0 +1,109 @@
+## mako
+<%page expression_filter="h"/>
+<%!
+  from django.core.urlresolvers import reverse
+  from django.utils.translation import ugettext as _
+  from branding.api import get_footer
+  from django.conf import settings
+%>
+<% footer = get_footer(is_secure=is_secure) %>
+<%namespace name='static' file='static_content.html'/>
+
+<div class="wrapper wrapper-footer">
+  <footer id="footer-openedx" class="grid-container"
+    ## When rendering the footer through the branding API,
+    ## the direction may not be set on the parent element,
+    ## so we set it here.
+    % if bidi:
+      dir=${bidi}
+    % endif
+  >
+<div class="colophon">    
+
+    <div class="wrapper-logo">
+     
+	<!-- PARTNERS -->
+	<a href="http://www.facso.uchile.cl/" target="_blank">
+	<img class="floating-box"  src="${static.url('eduabierta/images/partners/facso.jpg')}" width="150px"alt="" />
+	</a>
+
+	<a href="http://www.ciencias.uchile.cl/ciencias/" target="_blank">
+	<img class="floating-box"  src="${static.url('eduabierta/images/partners/ciencias.jpg')}" width="150px"alt="" />
+	</a>	
+	
+	<a href="http://www.filosofia.uchile.cl/" target="_blank">
+	<img class="floating-box"  src="${static.url('eduabierta/images/partners/filo.jpg')}" width="150px"alt="" />
+	</a>
+	
+	<a href="http://www.ciae.uchile.cl/" target="_blank">
+	<img class="floating-box"  src="${static.url('eduabierta/images/partners/ciae.jpg')}" width="200px" alt="" />
+	</a>
+      </div>
+
+      ## Site operators: Please do not remove this paragraph! This attributes back to edX and makes your acknowledgement of edX's trademarks clear.
+      <p class="copyright">${footer['copyright']}</p>
+
+      <nav class="nav-legal" aria-label="${_('Legal')}">
+        <ul>
+  	    <li class="nav-legal-01"><a href="/faq">${_("Preguntas Frecuentes")}</a></li>
+	   <!-- <li class="nav-legal-02"><a href="/tos">${_("Terminos de Uso")}</a></li>-->
+            <li class="nav-legal-03"><a href="/honor">${_(u"- Código de Honor")}</a></li>
+	    <!-- <li class="nav-legal-04"><a href="/contact">${_("- Contacto")}</a></li>-->
+	    %if settings.PLATFORM_FACEBOOK_ACCOUNT:
+	    	<li class="nav-legal-05"><a href="${settings.PLATFORM_FACEBOOK_ACCOUNT}">${_("- Facebook")}</a></li>
+	    %endif
+	    %if settings.PLATFORM_TWITTER_ACCOUNT:
+            	<li class="nav-legal-06"><a href="https://twitter.com/${settings.PLATFORM_TWITTER_ACCOUNT}">${_("- Twitter")}</a></li>
+            %endif
+	</ul>
+      </nav>
+    </div>
+
+    ## Please leave this link and use one of the logos provided
+    ## The OpenEdX link may be hidden when this view is served
+    ## through an API to partner sites (such as marketing sites or blogs),
+    ## which are not technically powered by OpenEdX.
+    % if not hide_openedx_link:
+    <div class="footer-about-openedx" style="padding-top:100px:;">
+      <div id="contenedor_rrss" align="right">
+	%if settings.PLATFORM_FACEBOOK_ACCOUNT:
+	<a href="${settings.PLATFORM_FACEBOOK_ACCOUNT}" target="_blank">
+		<img src="${static.url('eduabierta/images/rrss/facebook.png')}" alt="Facebook"/>
+	</a>
+	%endif
+	%if settings.PLATFORM_TWITTER_ACCOUNT:
+	<a href="https://twitter.com/${settings.PLATFORM_TWITTER_ACCOUNT}" target="_blank">
+		<img src="${static.url('eduabierta/images/rrss/twitter.png')}" alt="Twitter"/>
+	</a>
+	%endif
+	</div>
+	<p style="padding-top:100px;">
+        <a href="${footer['openedx_link']['url']}" target="_blank">
+          <img src="${footer['openedx_link']['image']}" alt="${footer['openedx_link']['title']}" width="140" />
+        </a>
+      </p>
+    </div>
+    % endif
+  </footer>
+</div>
+% if include_dependencies:
+  <%static:js group='base_vendor'/>
+  <%static:css group='style-vendor'/>
+  <%include file="widgets/segment-io.html" />
+  <%include file="widgets/segment-io-footer.html" />
+% endif
+% if footer_css_urls:
+  % for url in footer_css_urls:
+    <link rel="stylesheet" type="text/css" href="${url}"></link>
+  % endfor
+% endif
+##<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+##  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+##  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+##  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+##  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+##<script type="text/javascript">
+##    angular.module('CourseInfoApp', ['ngMaterial']);
+## </script>
+##<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+##<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>

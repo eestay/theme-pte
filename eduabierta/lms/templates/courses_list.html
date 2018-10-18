@@ -1,0 +1,47 @@
+<%page expression_filter="h"/>
+<%namespace name='static' file='static_content.html'/>
+<%! from django.utils.translation import ugettext as _ %>
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 row" style="padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;background-color:#0078af;">
+                <p class="barra_cursos" style="height:70px;background-color:#0078af;">CURSOS ABIERTOS</p>
+        </div>
+<section class="courses-container">
+  <section class="highlighted-courses">
+
+    % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
+	<section class="courses">
+        <ul class="courses-listing">
+          %for course in courses:
+	  % if not course.invitation_only:
+          <li class="courses-listing-item">
+              <%include file="course.html" args="course=course" />
+          </li>
+	  %endif
+        %endfor
+        </ul>
+      </section>	
+    % endif
+
+  </section>
+</section>
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding-left:0px;padding-right:0px;margin-left:0px;margin-right:0px;background-color:#0078af;">
+                <p class="barra_cursos" style="height:70px;background-color:#0078af;">PROGRAMAS EDUCACIÓN CONTINUA</p>
+        </div>
+<section class="courses-container">
+  <section class="highlighted-courses">
+
+    % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
+        <section class="courses">
+        <ul class="courses-listing">
+          %for course in courses:
+          % if course.invitation_only:
+          <li class="courses-listing-item">
+              <%include file="course.html" args="course=course" />
+          </li>
+          %endif
+        %endfor
+        </ul>
+      </section>
+    % endif
+  </section>
+</section>
+

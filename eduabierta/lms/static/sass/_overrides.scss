@@ -1,0 +1,104 @@
+.header-global h1.logo img {
+	max-height: 80px;
+}
+
+.home > header {
+		.outer-wrapper {
+		padding-top: 150px;
+	    padding-bottom: 150px;
+	}
+	.title {
+		background: transparent;
+		box-shadow: none;
+		margin-left: 0;
+
+		> .heading-group h1 {
+			color: #fff;
+			text-shadow: none;
+		}
+		> .heading-group p {
+			color: #fff;
+		}
+	}
+}
+
+#global-navigation {
+	min-height: 180px;
+        border: 0px;
+	box-shadow: 0px;
+	
+}
+
+
+.home_content{
+	display: block;
+	margin: auto;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+display: block;
+height: auto;
+max-width: 100%;
+line-height: 1;
+width: 100%;
+}
+
+.floating-box {
+display: inline-block;
+margin: 10px;
+}
+
+.bloque_texto{
+padding: auto;
+width: 100%;
+margin-top:10px;
+}
+
+.logo_box{
+vertical-align: top;
+padding-left: 25px;
+max-width: 400px;
+text-align: left;
+padding-top: 10px;
+}
+
+.texto_box{
+ padding-top:25px;
+ padding-left:25px;	
+ max-width:50%;
+ text-align: left;
+}
+
+.aviso_plataforma{
+	background-color:#019fc6;
+	color:white;
+	text-align:center;
+	padding:10px;
+	font-size:large;
+}
+
+.barra_cursos{
+	margin-top:10px;
+	text-align:center;
+	width:100%;
+	color:white;
+	background-color:#019fc6;	
+	height:60px;
+	padding:20px;
+	font-size:large;	
+}
+
+.bloque_cursos{
+	margin-top:-80px;
+}
+
+.header-global .nav-global{
+	margin-top:21px;
+	
+}
+
+.slim:required{
+	padding-bottom:100px;
+}
+

@@ -1,0 +1,61 @@
+##EXT.001
+<%page expression_filter="h" args="course_ext,course_overview, enrollment" />
+
+<%!
+from django.utils.translation import ugettext as _
+from openedx.core.djangolib.markup import HTML, Text
+%>
+<%namespace name='static' file='../static_content.html'/>
+<div class="message message-status course-status-certavailable is-shown" style="padding-left: 0px !important;border: 0px !important;padding-right: 0px;">
+  <div style="font-weight: normal;">Este curso tiene una versión certificada</div>
+  <div class="wrapper-message-primary">
+    <ul class="actions actions-primary" style="float:left !important;">
+        <li><span style="color: red;" id="course_ext_error_${course_ext['course_id']}" style="display: none;"></span></li>
+        <li class="action"  style="float: left !important;margin: 10px 10px 10px 0 !important;">
+          <a class="btn btn-default btn-lg" id="course_ext_but_${course_ext['course_id']}" style="border-color: #0075b4;text-transform: none;" title="Más información">Más información</a>
+        </li>
+        <li id="course_ext_loading_${course_ext['course_id']}" style="display: none;"><img style="margin-left: 50px;" src="${static.url('eduabierta/images/ajax-loader.gif')}" alt="loading" /></li>
+    </ul>
+  </div>
+</div>
+<script type="text/javascript">
+  (function() {
+    $("#course_ext_but_${course_ext['course_id']}").click(function(event) {
+        $("#course_ext_but_${course_ext['course_id']}").hide();
+        $("#course_ext_error_${course_ext['course_id']}").hide();
+        $("#course_ext_loading_${course_ext['course_id']}").show();
+        $.ajax({
+             type: "POST",
+             data: {course_id: "${enrollment.course_id}", csrfmiddlewaretoken:"${csrf_token}"},
+             url: "/course_extended/api/info/",
+             success: function (data) {
+                 if (data.result){
+                     $("#course_ext_loading_${course_ext['course_id']}").hide();
+                     $("#course_ext_but_${course_ext['course_id']}").show();
+                     location.href = data.url;
+                 }
+                 else{
+                     if(data.msg != undefined){
+                         $("#course_ext_error_${course_ext['course_id']}").text(data.msg);
+                     }
+                     else{
+                          $("#course_ext_error_${course_ext['course_id']}").text("No disponible por el momento, favor intente más tarde");
+                     }
+                     $("#course_ext_loading_${course_ext['course_id']}").hide();
+                     $("#course_ext_but_${course_ext['course_id']}").show();
+                     $("#course_ext_error_${course_ext['course_id']}").show();
+                 }
+             },
+             error: function(jqXHR, textStatus, errorThrown) {
+                 $("#course_ext_loading_${course_ext['course_id']}").hide();
+                 $("#course_ext_but_${course_ext['course_id']}").show();
+                 if (jqXHR.responseText != undefined)
+                    $("#course_ext_error_${course_ext['course_id']}").text(jqXHR.responseText);
+                 else
+                     $("#course_ext_error_${course_ext['course_id']}").text("No disponible por el momento, favor intente más tarde");
+                 $("#course_ext_error_${course_ext['course_id']}").show();
+             }
+         });
+    });
+  })(this)
+  </script>

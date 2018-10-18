@@ -1,0 +1,38 @@
+# -*- coding: utf-8 -*-
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<%block name="pagetitle">${_("EduAbierta")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="container about" style="min-width:320px !important;">
+        <h1>${_("EduAbierta")}</h1>
+
+		<p>${_(u"Eduabierta es una plataforma desarrollada por el Programa Transversal de Educación (PTE) de la Universidad de Chile para ofrecer recursos formativos abiertos y de excelencia a toda la comunidad escolar nacional.")}<p>
+		<p>${_(u"Tiene por objetivos fundamentales desarrollar un modelo de apertura y gestión del conocimiento y el patrimonio educativo de la Universidad de Chile y promover la construcción de redes de colaboración con otras universidades del Estado, a fin de contribuir al fortalecimiento de la educación pública; dinamizar el proceso de digitalización de la formación docente inicial, continua y de postgrado; e impulsar la promoción de una cultura de innovación pedagógica.")}</p>
+		<p>${_(u"Para ello, la plataforma ha sido construida con tecnología educativa open source capaz de soportar y gestionar a gran escala cursos abiertos, masivos y en línea, diseñados para profesores y directivos del sistema escolar, estudiantes de enseñanza media y padres/apoderados, entre otros recursos educativos abiertos (REA). Con el tiempo, se espera articular este tipo de cursos con programas académicos de formación docente tanto inicial como continua y de postgrado de las unidades integrantes del PTE y de otras facultades, institutos y centros de la universidad.")}</p>
+		<p>${_(u"El Programa Transversal de Educación (PTE) es un programa articulador de las unidades académicas y de las diversas iniciativas que han surgido en la Universidad de Chile en torno a la educación y a las pedagogías. Su trabajo busca facilitar las relaciones inter-facultades y el trabajo interdisciplinario.")}<br></p>
+
+		<ul><strong>${_(u"Equipo de Desarrollo PTE")}</strong>
+			<li>${_(u"Coordinación ejecutiva: Rodrigo Hurtado")}</li>
+			<li>${_(u"Encargado de operaciones: Cristóbal Feller")}</li>
+			<li>${_(u"Ingeniería: Bryan Prosser y Nicolás Mena")}</li>
+			<li>${_(u"Diseño instruccional: Christian Reyes")}</li>
+			<li>${_(u"Comunicaciones y relaciones internacionales: Alicia Sánchez")}</li>
+			<li>${_(u"Encargado de estudios y sistematización: Pablo Alvarado")}</li>
+			<li>${_(u"Diseño gráfico: Cristian Flores")}</li>
+			<li>${_(u"Producción audiovisual: Ricardo Núñez")}</li>
+			<li>${_(u"Guiones: Iñigo García")}</li>
+			<li>${_(u"Dinamización aprendizajes: Verónica Ávila")}</li>
+			<li>${_(u"Montaje: Montserrat Vargas")}</li>
+		</ul>
+	<br>
+		<ul><strong>${_(u"Créditos fotográficos")}</strong>
+			<li>${_(u"Patricio Guzmán Campos, Departamento de Fotografía y Microfilm Universidad de Chile, Fotografía frontis de Casa Central, Santiago, 1969. Subcolección Institucional, Colección Archivo Fotográfico, Archivo Central Andrés Bello de la Universidad de Chile.")}</li>
+			<li>${_(u"Departamento de Fotografía y Microfilm, Universidad de Chile,  Escuela Popular Valentín Letelier, Santiago, 1952. Subcolección Institucional, Colección Archivo Fotográfico, Archivo Central Andrés Bello de la Universidad de Chile.")}</li>
+			<li>${_(u"Celebración Día Internacional de la Mujer, Instituto Pedagógico, Santiago, 1980. Remis Ramos.")}</li>
+			<li>${_(u"Mural pintado por estudiantes de Pedagogía de la Universidad de Chile y muralista “Mono” González, Campus Juan Gómez Millas, Santiago, 2014; Escuela Básica Anne Eleonor Roosevelt, Santiago, 2015; Casa Central Universidad de Chile, Santiago, 2016. Universidad de Chile.")}</li>
+		</ul>
+	 </section>
+</main>

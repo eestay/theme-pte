@@ -1,0 +1,25 @@
+/* line 1, /edx/app/edxapp/edx-platform/themes/eduabierta/lms/static/sass/backup_overrides.scss */
+.header-global h1.logo img {
+  max-height: 40px; }
+
+/* line 5, /edx/app/edxapp/edx-platform/themes/eduabierta/lms/static/sass/backup_overrides.scss */
+.home > header {
+  background: url("../starter-theme/images/kids.jpeg");
+  background-size: cover;
+  background-position: 50%; }
+  /* line 10, /edx/app/edxapp/edx-platform/themes/eduabierta/lms/static/sass/backup_overrides.scss */
+  .home > header .outer-wrapper {
+    padding-top: 150px;
+    padding-bottom: 150px; }
+  /* line 14, /edx/app/edxapp/edx-platform/themes/eduabierta/lms/static/sass/backup_overrides.scss */
+  .home > header .title {
+    background: transparent;
+    box-shadow: none;
+    margin-left: 0; }
+    /* line 19, /edx/app/edxapp/edx-platform/themes/eduabierta/lms/static/sass/backup_overrides.scss */
+    .home > header .title > .heading-group h1 {
+      color: #fff;
+      text-shadow: none; }
+    /* line 23, /edx/app/edxapp/edx-platform/themes/eduabierta/lms/static/sass/backup_overrides.scss */
+    .home > header .title > .heading-group p {
+      color: #fff; }

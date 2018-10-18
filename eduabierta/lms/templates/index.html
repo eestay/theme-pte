@@ -1,0 +1,82 @@
+<%page expression_filter="h"/>
+<%inherit file="main.html" />
+<%namespace name='static' file='static_content.html'/>
+<%!
+from django.utils.translation import ugettext as _
+from django.core.urlresolvers import reverse
+
+from openedx.core.djangolib.markup import HTML, Text
+%>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="home">
+      <header>
+        <div>
+          <div>
+            <div class="heading-group">
+            </div>
+            </div>   
+        </div>
+      </header>
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+          ##begin streaming
+	  ##<div class="container-fluid" style="padding-bottom:16px;padding-left:0px;padding-right:0px;">
+	  ##	        <div class="row">
+	  ##		         <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
+	  ##			          <div class="embed-responsive embed-responsive-16by9">
+	  ##				           <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/P3U5agmOVzI?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+	  ##			          </div>
+	  ##		         </div>
+	  ##	        </div>
+	  ##     </div>
+	  ##end streaming
+	  ##<div class="container-fluid alert-info" style="padding-top:16px;padding-bottom:16px;color: #0075b4;">
+          ##      <strong>Por razones de fuerza mayor, se posterga  la realización del debate vía streaming "Educación sexual y juventud: Desafíos y oportunidades"</strong> para el lunes 18 de junio a las 19 hrs (de Chile).<br>
+	  ##	Atentamente, equipo EduAbierta
+          ##</div>
+	  <div id="contenedor_carrusel" align="center">
+                  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <!-- Slides -->
+                        <div class="carousel-inner" role="listbox">
+                          <div class="item active">
+                                ##<img src="${static.url('eduabierta/images/slides/slide_1_23marv2.jpg')}" alt="">
+                                <img src="${static.url('eduabierta/images/slides/slide_1_14may_v2.jpg')}" alt="">
+			  </div>
+                          <div class="item">
+                                <img src="${static.url('eduabierta/images/slides/slide_2_23marv2.jpg')}" alt="">
+                          </div>
+
+                          <div class="item">
+                                <img src="${static.url('eduabierta/images/slides/slide_3_23marv2.jpg')}" alt="">
+                          </div>
+                        </div>
+                        <!-- Controles -->
+                        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                          <span class="sr-only">Previo</span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                          <span class="sr-only">Siguiente</span>
+			</a>
+		</div> 
+		<div class="bloque_texto fluid-container row" style="background-color: #008ac9;margin-top: 0px;">
+                	<img style="padding: calc(16px + 2%);" class="col-xs-12 col-sm-12 col-md-5 col-lg-4" src="${static.url('eduabierta/images/cuadro_bajo_.png')}" alt="">
+                        <p class="col-xs-12 col-sm-12 col-md-7 col-lg-8" style="padding: calc(8px + 2%);color: white;font-size: 18px;text-align: justify;font-family: 'Open Sans', Verdana, Geneva, sans-serif, sans-serif;">
+				EduAbierta es una iniciativa del Programa Transversal de Educación de la Universidad de Chile destinada a ofrecer cursos abiertos y programas de educación continua a la comunidad educativa nacional y latinoamericana, a fin de contribuir al fortalecimiento de una educación pública de calidad. De esta forma, aprovechando las potencialidades propias de las tecnologías educativas, EduAbierta actualiza y proyecta al futuro la misión y los principios rectores que orientan el quehacer de la primera universidad estatal chilena.
+			</p> 
+		</div>
+	</div>	  
+     <div class="bloque_cursos" style="margin-top:-50px;">	  
+      <%include file="${courses_list}" />
+     </div>
+
+    </section>
+</main>
+
+
+
+
+
+
