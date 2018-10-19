@@ -52,13 +52,13 @@ site_status_msg = get_site_status_msg(course_id)
 		% if user.is_authenticated():
 		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
 			<a href="/" style="width:100%;">
-				<img src="${static.url('eduabierta/images/logo_web.jpg')}" class="img-responsive"/>
+				<img src="${static.url('eduabierta/images/logos_uchile_pte.jpg')}" class="img-responsive"/>
 			</a>
 		</div>
 		%else:
 		 <div class="col-xs-10 col-sm-6 col-md-6 col-lg-6" style="padding-left:0px;padding-right:0px;">
                         <a href="/" style="width:100%;">
-                                <img src="${static.url('eduabierta/images/logo_web.jpg')}" class="img-responsive"/>
+                                <img src="${static.url('eduabierta/images/logos_uchile_pte.jpg')}" class="img-responsive"/>
                         </a>
                 </div>
 		
@@ -159,6 +159,9 @@ site_status_msg = get_site_status_msg(course_id)
               <li class="item nav-global-04 col-xs-12 col-sm-5 col-md-5 col-lg-5" style="vertical-align: text-bottom;padding-left:0px;padding-right:0px;">
                 <a class="btn btn_index" href="/news">${_("PATRIMONIO EDUCATIVO")}</a>
               </li>
+              <li class="item nav-global-04 col-xs-12 col-sm-5 col-md-5 col-lg-5" style="vertical-align: text-bottom;padding-left:0px;padding-right:0px;">
+                <a class="btn btn_index" href="/faq">${_("PREGUNTAS FRECUENTES")}</a>
+              </li>										 
             % endif
           % endif
         </%block>
@@ -200,6 +203,9 @@ site_status_msg = get_site_status_msg(course_id)
               <li class="item nav-global-04 col-xs-12 col-sm-5 col-md-5 col-lg-5" style="vertical-align: text-bottom;padding-left:0px;padding-right:0px;">
                 <a class="btn btn_index" href="/news">${_("PATRIMONIO EDUCATIVO")}</a>
               </li>
+              <li class="item nav-global-04 col-xs-12 col-sm-5 col-md-5 col-lg-5" style="vertical-align: text-bottom;padding-left:0px;padding-right:0px;">
+                <a class="btn btn_index" href="/faq">${_("PREGUNTAS FRECUENTES")}</a>
+              </li>										 
             % endif
           % endif
         </%block>
@@ -216,14 +222,14 @@ site_status_msg = get_site_status_msg(course_id)
             % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
               % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-			<a class="btn" style="text-align:center;background-color:#0078af;" href="${reverse('course-specific-login', args=[course.id.to_deprecated_string()])}${login_query()}">${_("Sign in")}</a>
+			<a class="btn" style="text-align:center;background-color:#21379A;" href="${reverse('course-specific-login', args=[course.id.to_deprecated_string()])}${login_query()}">${_("Sign in")}</a>
 		</div>
               % else:
 		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-			<a class="btn" style=" text-align: center; width: 100%; padding-left: 8px; padding-right: 8px;background-color:#0078af;" href="/register${login_query()}">${_("Register")}</a>
+			<a class="btn" style=" text-align: center; width: 100%; padding-left: 8px; padding-right: 8px;background-color:#21379A;" href="/register${login_query()}">${_("Register")}</a>
 		</div>
                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-			<a class="btn" style=" text-align: center; width: 100%; padding-left: 8px; padding-right: 8px;background-color:#0078af;" href="/login${login_query()}">${_("Sign in")}</a>
+			<a class="btn" style=" text-align: center; width: 100%; padding-left: 8px; padding-right: 8px;background-color:#21379A;" href="/login${login_query()}">${_("Sign in")}</a>
 		</div>
               % endif
             % endif
