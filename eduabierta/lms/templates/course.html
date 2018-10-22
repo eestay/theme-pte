@@ -15,9 +15,10 @@ from django.core.urlresolvers import reverse
     </header>
     <div class="course-info" aria-hidden="true">
       <h2 class="course-name">
-        <!--<span class="course-organization">${course.display_org_with_default}</span>->
-        <!--<span class="course-code">${course.display_number_with_default}</span>-->
         <span class="course-title" style="height:130px;">${course.display_name_with_default}</span>
+        <div class="desc">
+          <p>${course.short_description}</p>
+        </div>
       </h2>
       <%
       if course.start is not None:
