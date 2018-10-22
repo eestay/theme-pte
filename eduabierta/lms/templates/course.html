@@ -10,16 +10,18 @@ from django.core.urlresolvers import reverse
     <header class="course-image">
       <div class="cover-image">
         <img class="img-circle center-block pte-front-course" src="${course.course_image_url}" alt="${course.display_name_with_default} ${course.display_number_with_default}" />
-        <div class="learn-more" aria-hidden="true">${_("LEARN MORE")}</div>
+        <div class="learn-more" aria-hidden="true">Ver más información</div>
       </div>
     </header>
     <div class="course-info" aria-hidden="true">
-      <h2 class="course-name pte-name">
-        <span class="course-title" style="height:130px;">${course.display_name_with_default}</span>
+      <div class="course-text-front">
+        <h2 class="course-name pte-name">
+          <span class="course-title" style="height:130px;">${course.display_name_with_default}</span>
+        </h2>
         <div class="course-desc-pte">
           <p>${course.short_description}</p>
         </div>
-      </h2>
+      </div>  
       <%
       if course.start is not None:
           course_date_string = course.start.strftime('%Y-%m-%dT%H:%M:%S%z')
