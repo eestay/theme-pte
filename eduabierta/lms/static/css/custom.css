@@ -30,7 +30,11 @@
 .pte-front-course{
   width: 150px !important;
   height: 150px !important;
+  margin-top: 5px;
 }
 .pte-name{
   margin-top:5px;
+}
+.course-text-front{
+  min-height:300px !important;
 }
