@@ -49,12 +49,6 @@
 	   <!-- <li class="nav-legal-02"><a href="/tos">${_("Terminos de Uso")}</a></li>-->
             <li class="nav-legal-03"><a href="/honor">${_(u"- Código de Honor")}</a></li>
 	    <!-- <li class="nav-legal-04"><a href="/contact">${_("- Contacto")}</a></li>-->
-	    %if settings.PLATFORM_FACEBOOK_ACCOUNT:
-	    	<li class="nav-legal-05"><a href="${settings.PLATFORM_FACEBOOK_ACCOUNT}">${_("- Facebook")}</a></li>
-	    %endif
-	    %if settings.PLATFORM_TWITTER_ACCOUNT:
-            	<li class="nav-legal-06"><a href="https://twitter.com/${settings.PLATFORM_TWITTER_ACCOUNT}">${_("- Twitter")}</a></li>
-            %endif
 	</ul>
       </nav>
     </div>
@@ -65,18 +59,6 @@
     ## which are not technically powered by OpenEdX.
     % if not hide_openedx_link:
     <div class="footer-about-openedx" style="padding-top:100px:;">
-      <div id="contenedor_rrss" align="right">
-	%if settings.PLATFORM_FACEBOOK_ACCOUNT:
-	<a href="${settings.PLATFORM_FACEBOOK_ACCOUNT}" target="_blank">
-		<img src="${static.url('eduabierta/images/rrss/facebook.png')}" alt="Facebook"/>
-	</a>
-	%endif
-	%if settings.PLATFORM_TWITTER_ACCOUNT:
-	<a href="https://twitter.com/${settings.PLATFORM_TWITTER_ACCOUNT}" target="_blank">
-		<img src="${static.url('eduabierta/images/rrss/twitter.png')}" alt="Twitter"/>
-	</a>
-	%endif
-	</div>
 	<p style="padding-top:100px;">
         <a href="${footer['openedx_link']['url']}" target="_blank">
           <img src="${footer['openedx_link']['image']}" alt="${footer['openedx_link']['title']}" width="140" />
