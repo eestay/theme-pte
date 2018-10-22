@@ -9,12 +9,12 @@ from django.core.urlresolvers import reverse
   <a href="${reverse('about_course', args=[course.id.to_deprecated_string()])}">
     <header class="course-image">
       <div class="cover-image">
-        <img src="${course.course_image_url}" alt="${course.display_name_with_default} ${course.display_number_with_default}" />
+        <img class="img-circle center-block pte-front-course" src="${course.course_image_url}" alt="${course.display_name_with_default} ${course.display_number_with_default}" />
         <div class="learn-more" aria-hidden="true">${_("LEARN MORE")}</div>
       </div>
     </header>
     <div class="course-info" aria-hidden="true">
-      <h2 class="course-name">
+      <h2 class="course-name pte-name">
         <span class="course-title" style="height:130px;">${course.display_name_with_default}</span>
         <div class="course-desc-pte">
           <p>${course.short_description}</p>
