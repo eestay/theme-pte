@@ -16,7 +16,8 @@ from branding import api as branding_api
 from status.status import get_site_status_msg
 %>
 <link rel="stylesheet" href="${static.url('eduabierta/css/navigation.css')}">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="${static.url('eduabierta/css/custom.css')}">	
 ## Provide a hook for themes to inject branding on top.
 <%block name="navigation_top" />
 
@@ -70,10 +71,10 @@ site_status_msg = get_site_status_msg(course_id)
                 </div>
 		%endif
 		<div class="socialbar-top col-xs-10 col-sm-6 col-md-6 col-lg-6" style="text-align: right;">
-			<a href="#" class="fa fa-facebook"></a>
-			<a href="#" class="fa fa-twitter"></a>
+			<a href="https://www.facebook.com/educauchile" class="fa fa-facebook"></a>
+			<a href="https://twitter.com/EducaUChile" class="fa fa-twitter"></a>
 			<a href="#" class="fa fa-youtube"></a>
-			<a href="#" class="fa fa-instagram"></a>							 							 
+			<a href="https://www.instagram.com/pte_uchile/" class="fa fa-instagram"></a>							 							 
                 </div>										 
 	</div>
 
