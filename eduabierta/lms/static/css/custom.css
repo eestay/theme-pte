@@ -27,3 +27,10 @@
     font-size: small;
     text-transform: none;
 }
+.pte-front-course{
+  width: 150px;
+  height: 150px;
+}
+.pte-name{
+  margin-top:5px;
+}
