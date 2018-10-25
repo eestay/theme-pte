@@ -35,6 +35,10 @@
   width: 150px !important;
   height: 150px !important;
   margin-top: 5px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 50%
 }
 .pte-name{
   margin-top:5px;
