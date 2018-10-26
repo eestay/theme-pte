@@ -1,5 +1,5 @@
-html, body {
-    font-family: "Open Sans", Verdana, Geneva, sans-serif, sans-serif !important;
+.course-info .details{
+  font-family: "Open Sans", Verdana, Geneva, sans-serif, sans-serif !important;
 }
 .fa{
   font-size: 1.5em !important;
