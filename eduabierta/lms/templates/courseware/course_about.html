@@ -414,7 +414,7 @@ from openedx.core.lib.courses import course_image_url
 
           	%if course_price and (can_add_course_to_cart or is_cosmetic_price_enabled) and not (invitation_only and course_price == _('Free')):
             		<li class="important-dates-item">
-              			<span class="icon fa fa-money" aria-hidden="true"></span>
+              			<span class="icon fa fa-graduation-cap" aria-hidden="true"></span>
               			<p class="important-dates-item-title">${_('Enrollment Cost')}</p>
 	      			%if course_price != _('Free'):
 					<%
